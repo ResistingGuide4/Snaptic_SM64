@@ -5,3 +5,11 @@ name = "SNAPTIC Bobomb Battlefield"
 version = "0.1.0"
 authors = ["InfoBroad"]
 description = "Adds the SM64 Level Bobomb Battlefieild to the game as a level. You can access it by opening the dev console (ctrl+alt+d, f1) and typing 'level bobomb_battlefield'"
+
+[snapticbase]
+dependencies = [
+    "snapticbase@>=0.2.0"
+]
+custom_levels = [
+    ["BOBOMB_BATTLEFIELD", "res://gdpatch/mod/snaptic_smsixtyfour/bobomb_battlefield.tscn"],
+]
