@@ -9,4 +9,4 @@ Make sure you have [SnapticBase](https://github.com/xNasuni/SnapticBase) install
 Join the [SNAPTIC Modding](https://discord.gg/PgfbejJ8D) discord server for an installation guide!
 
 ## Current Levels Added
-1. Bob-omb Battlefield (Credit for model goes to alec.pike@gmail.com)
+1. Bob-omb Battlefield (Credit for model goes to alec.pike@gmail.com). Level Name is "bobomb_battlefield"
