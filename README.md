@@ -2,7 +2,7 @@
 
 This is a mod for the Snaptic Demo made for [GDPatch Modloader](https://gdpatch.dev/)
 
-Adds Areas from Super Mario 64 to the Snaptic Demo as custom levels
+Adds Areas from Super Mario 64 to the Snaptic Demo as custom levels. You can access them by opening the Dev Terminal (ctrl + alt + d, f1) and typing "level <level_name>"
 
 Make sure you have [SnapticBase](https://github.com/xNasuni/SnapticBase) installed along with this mod
 
