@@ -6,6 +6,8 @@ Adds Areas from Super Mario 64 to the Snaptic Demo as custom levels. You can acc
 
 Make sure you have [SnapticBase](https://github.com/xNasuni/SnapticBase) installed along with this mod
 
+There is also a separate zip in each release that is fully compatible with [sMaptic Map Loader](https://github.com/theidiotcreature/sMapticMapLoader)
+
 Join the [SNAPTIC Modding](https://discord.gg/PgfbejJ8D) discord server for an installation guide!
 
 ## Current Levels Added
