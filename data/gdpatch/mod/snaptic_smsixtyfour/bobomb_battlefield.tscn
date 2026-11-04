@@ -183,7 +183,7 @@ teleport_zone_end_margin = Vector3(1, 4, 1)
 teleport_zone_ratio = Vector3(0.6, 0.2, 0.6)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CheckpointArea3D" unique_id=1179017325]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.5, 0)
 shape = SubResource("BoxShape3D_ym6hg")
 debug_color = Color(0.16333334, 0.7, 0, 0.42)
 
