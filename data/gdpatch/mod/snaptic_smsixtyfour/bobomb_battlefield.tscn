@@ -22,7 +22,7 @@ fog_density = 0.1
 [sub_resource type="BoxShape3D" id="BoxShape3D_ym6hg"]
 size = Vector3(5, 5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvii6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ea5m"]
 render_priority = 127
 shading_mode = 0
 albedo_color = Color(0, 1, 0, 1)
@@ -30,7 +30,7 @@ distance_fade_mode = 1
 distance_fade_min_distance = 300.0
 distance_fade_max_distance = 32.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egies"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjwfm"]
 render_priority = 127
 blend_mode = 1
 shading_mode = 0
@@ -131,8 +131,6 @@ backface_collision = true
 data = PackedVector3Array(-15.096399, -15.8411, 13.4286995, -15.0988, -8.1631, 12.1332, -15.0941, -15.8431, 12.1486, -15.099899, -8.161099, 13.413099, -15.0988, -8.1631, 12.1332, -15.096399, -15.8411, 13.4286995, 9.0216, -27.1439, 12.197499, 4.1071997, -29.7066, 12.707399, 4.1084, -29.7076, 12.1974, 9.0216, -27.142899, 12.7076, 4.1071997, -29.7066, 12.707399, 9.0216, -27.1439, 12.197499, 11.5806, -24.788, 12.1956, 9.0216, -27.142899, 12.7076, 9.0216, -27.1439, 12.197499, 11.5794, -24.786999, 12.7056, 9.0216, -27.142899, 12.7076, 11.5806, -24.788, 12.1956, 11.5782995, -22.8667, 12.701699, 11.5794, -24.786999, 12.7056, 11.5736, -22.867699, 12.1917, 11.5794, -24.786999, 12.7056, 11.5806, -24.788, 12.1956, 11.5736, -22.867699, 12.1917, 15.6326, 3.3253999, 17.6482, 15.6338, 3.3244, 17.0082, 31.5907, 12.9418, 18.6211, 15.6338, 3.3244, 17.0082, 31.585999, 12.9408, 17.9811, 31.5907, 12.9418, 18.6211, -35.572, -20.972599, 13.4168, -20.213299, -20.9635, 13.433399, -35.5708, -20.9756, 12.1369, -35.5708, -20.9756, 12.1369, -20.213299, -20.9635, 13.433399, -20.211, -20.9665, 12.1535, -15.0941, -15.8431, 12.1486, -20.211, -20.9665, 12.1535, -15.096399, -15.8411, 13.4286995, -15.096399, -15.8411, 13.4286995, -20.211, -20.9665, 12.1535, -20.213299, -20.9635, 13.433399, 40.6909, 29.4723, 18.5975, 31.5907, 12.9418, 18.6211, 31.585999, 12.9408, 17.9811, 40.6921, 29.470299, 17.9575, 40.6909, 29.4723, 18.5975, 31.585999, 12.9408, 17.9811, 6.7022996, -19.5702, 12.1797, -7.3483996, -10.6475, 12.761499, 6.7011, -19.569199, 12.7948, -7.3472, -10.6484995, 12.1466, -7.3483996, -10.6475, 12.761499, 6.7022996, -19.5702, 12.1797, 4.1119, -36.3106, 12.720699, 4.1119, -36.3116, 12.210799, 4.1071997, -29.7066, 12.707399, 4.1071997, -29.7066, 12.707399, 4.1119, -36.3116, 12.210799, 4.1084, -29.7076, 12.1974)
 backface_collision = true
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vvii6"]
-
 [sub_resource type="Gradient" id="Gradient_vvii6"]
 offsets = PackedFloat32Array(0, 0.5584416, 0.76623374)
 colors = PackedColorArray(0, 0, 0, 0.78431374, 0.003921569, 0.003921569, 0.003921569, 0.78431374, 0.012617188, 0.012617188, 0.012617188, 0)
@@ -188,8 +186,8 @@ shape = SubResource("BoxShape3D_ym6hg")
 debug_color = Color(0.16333334, 0.7, 0, 0.42)
 
 [node name="ShapeVisualizerMesh3D" parent="CheckpointArea3D/CollisionShape3D" unique_id=213032708 instance=ExtResource("5_ysvij")]
-surface_material_override/0 = SubResource("StandardMaterial3D_vvii6")
-surface_material_override/1 = SubResource("StandardMaterial3D_egies")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ea5m")
+surface_material_override/1 = SubResource("StandardMaterial3D_pjwfm")
 
 [node name="TeleportZoneCSG" parent="CheckpointArea3D" unique_id=1734133524 instance=ExtResource("7_7jix5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -286,60 +284,168 @@ shape = SubResource("ConcavePolygonShape3D_5u5sv")
 [node name="scene" parent="StaticBody3D" unique_id=1480074626 instance=ExtResource("8_ygm8m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.747707, 5.7049074, 35.559544)
 
-[node name="tree" type="Sprite3D" parent="StaticBody3D" unique_id=985248285]
-transform = Transform3D(7.9968557, 0, -0.22427776, 0, 8, 0, 0.22427776, 0, 7.9968557, -43.532593, 16.611488, 60.470257)
-visible = false
-billboard = 2
-texture = SubResource("CompressedTexture2D_vvii6")
+[node name="Scenery" type="Node3D" parent="StaticBody3D" unique_id=1810707182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
 
-[node name="Decal" type="Decal" parent="StaticBody3D/tree" unique_id=1507958584]
+[node name="tree" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=985248285]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -43.33963, 16.508608, 60.47027)
+billboard = 2
+
+[node name="Decal" type="Decal" parent="StaticBody3D/Scenery/tree" unique_id=1507958584]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 size = Vector3(0.5, 0.1, 0.5)
 texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
 
-[node name="tree2" type="Sprite3D" parent="StaticBody3D" unique_id=1102454503]
-transform = Transform3D(7.9968557, 0, -0.22427776, 0, 8, 0, 0.22427776, 0, 7.9968557, -28.697618, 17.32313, 62.124878)
-visible = false
+[node name="tree2" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1102454503]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -28.69762, 17.32313, 62.124878)
 billboard = 2
-texture = SubResource("CompressedTexture2D_vvii6")
 
-[node name="Decal2" type="Decal" parent="StaticBody3D/tree2" unique_id=2111170132]
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree2" unique_id=2111170132]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 size = Vector3(0.5, 0.1, 0.5)
 texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
 
-[node name="tree3" type="Sprite3D" parent="StaticBody3D" unique_id=2123767385]
-transform = Transform3D(7.9968557, 0, -0.22427776, 0, 8, 0, 0.22427776, 0, 7.9968557, -4.9710236, 20.336905, 65.417694)
-visible = false
+[node name="tree3" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=2123767385]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -4.9710245, 20.336905, 65.417694)
 billboard = 2
-texture = SubResource("CompressedTexture2D_vvii6")
 
-[node name="Decal2" type="Decal" parent="StaticBody3D/tree3" unique_id=908616310]
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree3" unique_id=908616310]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 size = Vector3(0.5, 0.1, 0.5)
 texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
 
-[node name="tree4" type="Sprite3D" parent="StaticBody3D" unique_id=1281991607]
-transform = Transform3D(7.9968557, 0, -0.22427776, 0, 8, 0, 0.22427776, 0, 7.9968557, 6.732483, 20.691128, 66.52557)
-visible = false
+[node name="tree4" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1281991607]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, 6.732483, 20.691128, 66.52557)
 billboard = 2
-texture = SubResource("CompressedTexture2D_vvii6")
 
-[node name="Decal2" type="Decal" parent="StaticBody3D/tree4" unique_id=775827816]
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree4" unique_id=775827816]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 size = Vector3(0.5, 0.1, 0.5)
 texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
 
-[node name="tree5" type="Sprite3D" parent="StaticBody3D" unique_id=803967638]
-transform = Transform3D(7.9968557, 0, -0.22427776, 0, 8, 0, 0.22427776, 0, 7.9968557, 0.89344215, 21.113136, 54.31157)
-visible = false
+[node name="tree5" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=803967638]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, 0.89344025, 21.113136, 54.311573)
 billboard = 2
-texture = SubResource("CompressedTexture2D_vvii6")
 
-[node name="Decal2" type="Decal" parent="StaticBody3D/tree5" unique_id=1832978034]
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree5" unique_id=1832978034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 size = Vector3(0.5, 0.1, 0.5)
 texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree6" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1803267250]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -42.325714, 20.310146, 44.695045)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree6" unique_id=9984492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree7" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=843506796]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -39.51529, 20.310146, 48.769073)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree7" unique_id=71432940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree8" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1972537642]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -42.471466, 20.310146, 53.045662)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree8" unique_id=2009623357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree9" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=597226768]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -47.497696, 20.310146, 47.983467)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree9" unique_id=1105810609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree10" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1093296937]
+transform = Transform3D(5.4978385, 0, -0.15419096, 0, 5.5, 0, 0.15419096, 0, 5.4978385, -54.700172, 20.310146, 54.407642)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree10" unique_id=1270298832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree11" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=157000449]
+transform = Transform3D(5.4978385, 0, -0.15419094, 0, 5.5, 0, 0.15419094, 0, 5.4978385, -53.738525, 21.573652, 35.333847)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree11" unique_id=842575385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree12" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=326441859]
+transform = Transform3D(5.4978385, 0, -0.15419094, 0, 5.5, 0, 0.15419094, 0, 5.4978385, -50.029297, 21.572191, 12.760868)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree12" unique_id=1558698033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree13" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=386395232]
+transform = Transform3D(5.4978385, 0, -0.15419094, 0, 5.5, 0, 0.15419094, 0, 5.4978385, -55.16723, 21.577444, 11.862183)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree13" unique_id=273425021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree14" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1906190836]
+transform = Transform3D(5.4978385, 0, -0.15419094, 0, 5.5, 0, 0.15419094, 0, 5.4978385, -1.151207, 31.874025, 43.63179)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree14" unique_id=1788797800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree15" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=1697633540]
+transform = Transform3D(5.4978385, 0, -0.15419094, 0, 5.5, 0, 0.15419094, 0, 5.4978385, 12.183792, 26.550484, 7.1246834)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree15" unique_id=106411278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
+
+[node name="tree16" type="Sprite3D" parent="StaticBody3D/Scenery" unique_id=371298938]
+transform = Transform3D(5.4978385, 0, -0.15419094, 0, 5.5, 0, 0.15419094, 0, 5.4978385, 9.379061, 27.139359, -1.3703632)
+billboard = 2
+
+[node name="Decal2" type="Decal" parent="StaticBody3D/Scenery/tree16" unique_id=302802723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+size = Vector3(0.5, 0.1, 0.5)
+texture_albedo = SubResource("GradientTexture2D_wrlcn")
+cull_mask = 1048543
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=323617845]
 volume_db = -10.0
