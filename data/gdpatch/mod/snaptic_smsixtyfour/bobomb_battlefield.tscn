@@ -303,3 +303,6 @@ cull_mask = 1048543
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=323617845]
 volume_db = -10.0
+
+[editable path="Level/CheckerboardLift"]
+[editable path="Level/CheckerboardLift2"]
