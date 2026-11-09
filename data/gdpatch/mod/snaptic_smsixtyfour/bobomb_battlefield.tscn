@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bised3n3pl1fj" path="res://features/checkpoint/checkpoint_shape_visualizer_mesh_3d.tscn" id="5_ysvij"]
 [ext_resource type="Texture2D" uid="uid://f3n5lww0qr3d" path="res://features/checkpoint/flag_triangular.svg" id="6_f58x1"]
 [ext_resource type="PackedScene" uid="uid://dtwt0ybxrj3st" path="res://features/checkpoint/teleport_zone.tscn" id="7_7jix5"]
+[ext_resource type="PackedScene" uid="uid://d0a3kyu446p1k" path="res://gdpatch/mod/snaptic_smsixtyfour/big_steely/ball_spawner.tscn" id="8_2ea5m"]
 [ext_resource type="PackedScene" uid="uid://mrd6cmw2nrss" path="res://gdpatch/mod/snaptic_smsixtyfour/scene.tscn" id="8_ygm8m"]
 [ext_resource type="PackedScene" uid="uid://chyhhraaugg3h" path="res://gdpatch/mod/snaptic_smsixtyfour/checkerboard_lift.tscn" id="9_egies"]
 
@@ -23,7 +24,7 @@ fog_density = 0.1
 [sub_resource type="BoxShape3D" id="BoxShape3D_ym6hg"]
 size = Vector3(5, 5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egies"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ea5m"]
 render_priority = 127
 shading_mode = 0
 albedo_color = Color(0, 1, 0, 1)
@@ -31,7 +32,7 @@ distance_fade_mode = 1
 distance_fade_min_distance = 300.0
 distance_fade_max_distance = 32.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ea5m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjwfm"]
 render_priority = 127
 blend_mode = 1
 shading_mode = 0
@@ -103,8 +104,8 @@ shape = SubResource("BoxShape3D_ym6hg")
 debug_color = Color(0.16333334, 0.7, 0, 0.42)
 
 [node name="ShapeVisualizerMesh3D" parent="CheckpointArea3D/CollisionShape3D" unique_id=213032708 instance=ExtResource("5_ysvij")]
-surface_material_override/0 = SubResource("StandardMaterial3D_egies")
-surface_material_override/1 = SubResource("StandardMaterial3D_2ea5m")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ea5m")
+surface_material_override/1 = SubResource("StandardMaterial3D_pjwfm")
 
 [node name="TeleportZoneCSG" parent="CheckpointArea3D" unique_id=1734133524 instance=ExtResource("7_7jix5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -112,6 +113,9 @@ size = Vector3(3, 1, 3)
 
 [node name="Level" type="Node3D" parent="." unique_id=650441254]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 42.895576, -12.35123, -70.05508)
+
+[node name="BallSpawner" parent="Level" unique_id=2128678140 instance=ExtResource("8_2ea5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.747707, 5.7049074, 35.559544)
 
 [node name="scene" parent="Level" unique_id=1480074626 instance=ExtResource("8_ygm8m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.747707, 5.7049074, 35.559544)

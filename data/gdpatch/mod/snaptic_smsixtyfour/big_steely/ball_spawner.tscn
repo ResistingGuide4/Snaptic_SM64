@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d0a3kyu446p1k"]
+
+[ext_resource type="Script" uid="uid://iqlu60nkc1eg" path="res://gdpatch/mod/snaptic_smsixtyfour/big_steely/ball_spawner.gd" id="1_ltutr"]
+[ext_resource type="PackedScene" uid="uid://mrd6cmw2nrss" path="res://gdpatch/mod/snaptic_smsixtyfour/scene.tscn" id="2_m8v3s"]
+
+[node name="BallSpawner" type="Node3D" unique_id=2128678140]
+script = ExtResource("1_ltutr")
+
+[node name="scene" parent="." unique_id=1480074626 instance=ExtResource("2_m8v3s")]
+
+[node name="Spawner1" type="Node3D" parent="." unique_id=764119169]
+
+[node name="Timer" type="Timer" parent="Spawner1" unique_id=14169051]
+wait_time = 3.3329999999999997
+one_shot = true
+
+[node name="Spawner2" type="Node3D" parent="." unique_id=546231481]
+
+[node name="Timer" type="Timer" parent="Spawner2" unique_id=1559590672]
+wait_time = 3.3329999999999997
+one_shot = true
