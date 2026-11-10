@@ -3,12 +3,15 @@ extends Level
 @onready var platform_anim1: AnimationPlayer = $Level/CheckerboardLift.find_child("AnimationPlayer", true, false)
 @onready var platform_anim2: AnimationPlayer = $Level/CheckerboardLift2.find_child("AnimationPlayer", true, false)
 
+@onready var MusicPlayer : LayeredMusicStreamPlayer = $MusicPlayer
+
 func _ready() -> void:
-	var stream = AudioStreamMP3.load_from_file("res://gdpatch/mod/snaptic_smsixtyfour/bobomb_battlefield.mp3");
-	stream.loop = true;
-	stream.loop_offset = 5.68;
-	$AudioStreamPlayer.stream = stream
-	$AudioStreamPlayer.play();
+	var stream = AudioStreamMP3.load_from_file("res://gdpatch/mod/snaptic_smsixtyfour/bobomb_battlefield.mp3")
+	stream.loop = true
+	stream.loop_offset = 5.68
+	MusicPlayer.stream = stream
+	MusicPlayer.play()
+	
 	for child in $Level/Scenery.get_children():
 		var image = Image.load_from_file("res://gdpatch/mod/snaptic_smsixtyfour/tree.png")
 		if image:
