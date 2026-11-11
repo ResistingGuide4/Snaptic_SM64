@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://dtvi60npbph13"]
 
 [ext_resource type="Script" uid="uid://c11ba8wdju0cv" path="res://gdpatch/mod/snaptic_smsixtyfour/big_steely/ball.gd" id="1_u58yv"]
+[ext_resource type="Texture2D" uid="uid://cl1u67roupfjo" path="res://gdpatch/mod/snaptic_smsixtyfour/big_steely/ball.png" id="2_qsnj0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_353ea"]
-radius = 0.64
+radius = 0.55
 
 [sub_resource type="Animation" id="Animation_o162r"]
 resource_name = "ball1_move"
-length = 8.2
+length = 19.35
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,29 +16,49 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.008333206, 1.3083333, 1.6000001, 1.7, 1.8000001, 2.2, 2.6000001, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.008333206, 1.3, 1.6000001, 1.7, 1.8000001, 2.2, 2.6000001, 6.0000005, 7.0000005, 9, 10.000001, 11.500001, 12.500001, 13.5, 15.000001, 16, 16.2, 16.400002, 16.6, 16.800001, 17, 17.2, 17.400002, 17.6, 17.800001, 18, 18.2, 18.400002, 18.6, 18.800001, 19.000002, 19.2, 19.333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(3.6871262, 22.37937, -25.256868), Vector3(2.087, 22.379, -27.969), Vector3(1.9386921, 21.97143, -28.267809), Vector3(1.8272617, 22.032568, -28.551468), Vector3(1.6592224, 21.847221, -28.732477), Vector3(2.7629747, 21.847221, -29.688105), Vector3(3.985, 21.697, -30.159), Vector3(15.4288025, 21.298998, -36.723114)]
+"values": [Vector3(3.687, 22.259, -25.257), Vector3(2.087, 22.259, -27.969), Vector3(1.939, 21.851, -28.268), Vector3(1.827, 21.913, -28.551), Vector3(1.659, 21.727, -28.732), Vector3(2.763, 21.727, -29.688), Vector3(3.985, 21.577, -30.159), Vector3(15.739, 21.084, -37.099), Vector3(19.191, 20.546, -34.317), Vector3(29.241, 18.997, -30.652), Vector3(30.649, 18.825, -26.897), Vector3(27.704, 18.451, -18.329), Vector3(30.778, 18.303, -13.487), Vector3(23.168, 17.945, -11.755), Vector3(16.649, 17.05, -9.503), Vector3(15.029, 17.2, -4.528), Vector3(14.785, 17.377, -3.991), Vector3(14.277, 16.971, -3.352), Vector3(13.976, 16.971, -3.45), Vector3(13.595, 16.687, -3.579), Vector3(12.855, 16.687, -3.751), Vector3(12.055, 15.957, -3.861), Vector3(10.921, 16.396, -3.954), Vector3(10.267, 15.457, -4.264), Vector3(8.492, 15.457, -4.471), Vector3(7.581, 14.067, -4.6), Vector3(5.245, 14.067, -4.5), Vector3(3.782, 12.443, -4.799), Vector3(1.424, 12.443, -4.982), Vector3(-1.24, 10.098, -5.311), Vector3(-4.05, 10.221, -5.616), Vector3(-6.488, 8.818, -5.956), Vector3(-8.374, 9.292, -5.956)]
+}
+
+[sub_resource type="Animation" id="Animation_gxout"]
+resource_name = "ball2_move"
+length = 14.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 1.6, 1.8, 4, 4.2000003, 6.2, 6.4000006, 8.6, 8.700001, 8.8, 9, 10.500001, 11.500001, 11.700001, 11.900001, 12.1, 12.3, 12.500001, 12.700001, 12.900001, 13.1, 13.300001, 13.500001, 13.700001, 13.9, 14.1, 14.300001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(9.281, 28.047, -25.821), Vector3(7.693, 28.047, -28.502), Vector3(7.409528, 27.48, -29.054201), Vector3(7.881106, 27.439, -29.617699), Vector3(15.994156, 26.832, -34.28396), Vector3(17.673492, 26.483166, -33.08178), Vector3(25.995735, 24.747509, -28.18678), Vector3(25.649897, 24.644024, -26.550377), Vector3(25.649899, 24.02964, -16.425243), Vector3(25.49602, 24.172026, -15.8943405), Vector3(24.984482, 23.969202, -15.985051), Vector3(23.91786, 23.942202, -15.879728), Vector3(15.372501, 23.353876, -10.872317), Vector3(12.177716, 15.67548, -9.754516), Vector3(11.075535, 16.181421, -8.847585), Vector3(9.627931, 15.555689, -7.858056), Vector3(8.379208, 15.899618, -6.868105), Vector3(5.9331465, 13.433536, -5.369052), Vector3(4.099618, 13.433536, -4.1385818), Vector3(2.0966015, 11.382578, -2.911787), Vector3(0.15906906, 11.1153145, -2.2238293), Vector3(-1.7784615, 9.739543, -1.5358713), Vector3(-3.8668528, 9.862465, -0.99533844), Vector3(-5.955244, 8.882569, -0.4548067), Vector3(-7.3622026, 9.198779, -0.5572796), Vector3(-8.769154, 8.836408, -0.6597526), Vector3(-9.338586, 9.128558, -0.693221), Vector3(-10.238254, 8.840783, -0.89174163)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mpn84"]
 _data = {
-&"ball1_move": SubResource("Animation_o162r")
+&"ball1_move": SubResource("Animation_o162r"),
+&"ball2_move": SubResource("Animation_gxout")
 }
 
 [node name="Ball" type="Node3D" unique_id=1870099781]
 
 [node name="Node3D" type="RigidBody3D" parent="." unique_id=1430907157]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6871262, 22.37937, -25.256868)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 3.687, 22.259, -25.257)
 script = ExtResource("1_u58yv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D" unique_id=1328408374]
 shape = SubResource("SphereShape3D_353ea")
+debug_color = Color(0.21425226, 0.5687388, 0.7858992, 1)
 
 [node name="Sprite3D" type="Sprite3D" parent="Node3D" unique_id=2039306893]
-transform = Transform3D(2.41, 0, 0, 0, 2.41, 0, 0, 0, 2.41, 0, 0, 0)
+transform = Transform3D(2.08, 0, 0, 0, 2.08, 0, 0, 0, 2.08, 0, 0, 0)
 billboard = 1
+alpha_cut = 1
+texture = ExtResource("2_qsnj0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D" unique_id=1797006162]
 libraries/ = SubResource("AnimationLibrary_mpn84")

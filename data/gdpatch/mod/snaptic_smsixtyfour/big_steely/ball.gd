@@ -6,5 +6,4 @@ func _ready() -> void:
 	$Sprite3D.texture = texture
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "ball1_move":
-		queue_free()
+	queue_free()

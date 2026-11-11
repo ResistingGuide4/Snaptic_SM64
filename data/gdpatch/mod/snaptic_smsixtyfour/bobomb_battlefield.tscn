@@ -24,7 +24,7 @@ fog_density = 0.1
 [sub_resource type="BoxShape3D" id="BoxShape3D_ym6hg"]
 size = Vector3(5, 5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjwfm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ea5m"]
 render_priority = 127
 shading_mode = 0
 albedo_color = Color(0, 1, 0, 1)
@@ -32,7 +32,7 @@ distance_fade_mode = 1
 distance_fade_min_distance = 300.0
 distance_fade_max_distance = 32.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwypn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjwfm"]
 render_priority = 127
 blend_mode = 1
 shading_mode = 0
@@ -104,8 +104,8 @@ shape = SubResource("BoxShape3D_ym6hg")
 debug_color = Color(0.16333334, 0.7, 0, 0.42)
 
 [node name="ShapeVisualizerMesh3D" parent="CheckpointArea3D/CollisionShape3D" unique_id=213032708 instance=ExtResource("5_ysvij")]
-surface_material_override/0 = SubResource("StandardMaterial3D_pjwfm")
-surface_material_override/1 = SubResource("StandardMaterial3D_rwypn")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ea5m")
+surface_material_override/1 = SubResource("StandardMaterial3D_pjwfm")
 
 [node name="TeleportZoneCSG" parent="CheckpointArea3D" unique_id=1734133524 instance=ExtResource("7_7jix5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
