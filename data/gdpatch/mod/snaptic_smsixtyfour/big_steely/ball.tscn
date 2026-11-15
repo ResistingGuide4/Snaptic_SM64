@@ -2,40 +2,94 @@
 
 [ext_resource type="Script" uid="uid://c11ba8wdju0cv" path="res://gdpatch/mod/snaptic_smsixtyfour/big_steely/ball.gd" id="1_u58yv"]
 [ext_resource type="Texture2D" uid="uid://cl1u67roupfjo" path="res://gdpatch/mod/snaptic_smsixtyfour/big_steely/ball.png" id="2_qsnj0"]
+[ext_resource type="Script" uid="uid://c04hys62vii2q" path="res://framework/components/hitbox_hurtbox/hitbox_area_3d.gd" id="3_wfwve"]
+[ext_resource type="Script" uid="uid://b284kyxoiaruq" path="res://framework/components/actions/action.gd" id="4_x2kw5"]
+[ext_resource type="Script" uid="uid://d1bexs05tsodp" path="res://framework/components/movement/knockback_action.gd" id="5_7o1u2"]
+[ext_resource type="Script" uid="uid://k6ptkg1xt4vv" path="res://framework/components/actions/force_player_mode_action.gd" id="7_fyq2b"]
+[ext_resource type="Script" uid="uid://d1nop88i4mvbq" path="res://framework/components/actions/impact_action.gd" id="8_rwfw8"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_353ea"]
 radius = 0.55
 
 [sub_resource type="Animation" id="Animation_o162r"]
 resource_name = "ball1_move"
-length = 19.35
+length = 21.9917
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.008333206, 1.3, 1.6000001, 1.7, 1.8000001, 2.2, 2.6000001, 6.0000005, 7.0000005, 9, 10.000001, 11.500001, 12.500001, 13.5, 15.000001, 16, 16.2, 16.400002, 16.6, 16.800001, 17, 17.2, 17.400002, 17.6, 17.800001, 18, 18.2, 18.400002, 18.6, 18.800001, 19.000002, 19.2, 19.333334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.008333206, 1.3, 1.6000001, 1.7, 1.8000001, 2.425, 2.85, 6.175, 7.8, 10.175, 11.05, 12.55, 14.383, 16.425, 17.383, 18.675, 18.866667, 19.066668, 19.266666, 19.466667, 19.666666, 19.866667, 20.066668, 20.266666, 20.466667, 20.666666, 20.866667, 21.066668, 21.266666, 21.466667, 21.666668, 21.858335, 21.991669),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 2, 1.25, 1, 1.5, 1.25, 1.5, 1.25, 1.25, 1.25, 1, 1.25, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(3.687, 22.259, -25.257), Vector3(2.087, 22.259, -27.969), Vector3(1.939, 21.851, -28.268), Vector3(1.827, 21.913, -28.551), Vector3(1.659, 21.727, -28.732), Vector3(2.763, 21.727, -29.688), Vector3(3.985, 21.577, -30.159), Vector3(15.739, 21.084, -37.099), Vector3(19.191, 20.546, -34.317), Vector3(29.241, 18.997, -30.652), Vector3(30.649, 18.825, -26.897), Vector3(27.704, 18.451, -18.329), Vector3(30.778, 18.303, -13.487), Vector3(23.168, 17.945, -11.755), Vector3(16.649, 17.05, -9.503), Vector3(15.029, 17.2, -4.528), Vector3(14.785, 17.377, -3.991), Vector3(14.277, 16.971, -3.352), Vector3(13.976, 16.971, -3.45), Vector3(13.595, 16.687, -3.579), Vector3(12.855, 16.687, -3.751), Vector3(12.055, 15.957, -3.861), Vector3(10.921, 16.396, -3.954), Vector3(10.267, 15.457, -4.264), Vector3(8.492, 15.457, -4.471), Vector3(7.581, 14.067, -4.6), Vector3(5.245, 14.067, -4.5), Vector3(3.782, 12.443, -4.799), Vector3(1.424, 12.443, -4.982), Vector3(-1.24, 10.098, -5.311), Vector3(-4.05, 10.221, -5.616), Vector3(-6.488, 8.818, -5.956), Vector3(-8.374, 9.292, -5.956)]
+"values": [3.687, 2.087, 1.834, 1.6720000000000002, 1.5939999999999999, 3.282, 4.794386, 15.739, 19.191, 29.241, 30.649, 27.624022, 30.778, 23.168, 17.094, 15.029, 14.785, 14.277, 13.976, 13.595, 12.855, 12.055, 10.921, 10.002, 8.492, 7.581, 5.245, 3.782, 1.424, -1.24, -4.05, -6.488, -8.374]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.008333206, 1.3, 1.6000001, 1.7, 1.8000001, 2.425, 2.85, 6.175, 7.8, 10.175, 11.05, 12.55, 14.383, 16.425, 17.383, 18.675, 18.866667, 19.066668, 19.270832, 19.466667, 19.670832, 19.866667, 20.070833, 20.266666, 20.470833, 20.666666, 20.870832, 21.066668, 21.270832, 21.466667, 21.6625, 21.858335, 21.991669),
+"transitions": PackedFloat32Array(1, 1.333, 0.6, 1.333, 1, 1, 1, 1.333, 1.25, 1.5, 1.25, 1.25, 1.25, 1, 1.25, 1, 1, 1, 1.666, 1, 1.666, 0.33, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 1.666, 1.333),
+"update": 0,
+"values": [22.259, 22.259, 21.741, 21.913, 21.727, 21.633917, 21.583813, 21.084, 20.546, 18.997, 18.825, 18.455156, 18.303, 17.945, 17.1, 17.2, 17.377, 16.971, 16.971, 16.687, 16.687, 16.022, 16.396, 15.102, 15.457, 14.067, 14.067, 12.443, 12.443, 10.098, 10.221, 8.818, 9.292]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.008333206, 1.3, 1.6000001, 1.7, 1.8000001, 2.425, 2.85, 6.175, 7.8, 10.175, 11.05, 12.55, 14.383, 16.425, 17.383, 18.675, 18.866667, 19.066668, 19.266666, 19.466667, 19.666666, 19.866667, 20.066668, 20.266666, 20.466667, 20.666666, 20.866667, 21.066668, 21.266666, 21.466667, 21.666668, 21.858335, 21.991669),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 2, 1.25, 1, 1.5, 1.25, 1.5, 1.25, 1.25, 1.25, 1, 1.25, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-25.257, -27.969, -28.568, -28.816, -28.972, -30.243, -30.595196, -37.099, -34.317, -30.652, -27.985971, -19.48221, -13.487, -11.755, -9.773, -4.528, -3.991, -3.352, -3.45, -3.579, -3.751, -3.861, -3.954, -4.284, -4.471, -4.6, -4.5, -4.799, -4.982, -5.311, -5.616, -5.956, -5.956]
 }
 
 [sub_resource type="Animation" id="Animation_gxout"]
 resource_name = "ball2_move"
-length = 14.3
+length = 16.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.3, 1.6, 1.8, 4, 4.2000003, 6.2, 6.4000006, 8.6, 8.700001, 8.8, 9, 10.500001, 11.500001, 11.700001, 11.900001, 12.1, 12.3, 12.500001, 12.700001, 12.900001, 13.1, 13.300001, 13.500001, 13.700001, 13.9, 14.1, 14.300001),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.4999999, 1.8, 1.9999999, 4.466, 5.1666665, 7.425, 8.3, 10.133334, 10.3, 10.474668, 10.733334, 12.482333, 13.6, 13.8, 14, 14.2, 14.4, 14.6, 14.8, 15, 15.2, 15.400001, 15.6, 15.799999, 15.999999, 16.2, 16.400005),
+"transitions": PackedFloat32Array(1, 1, 2, 1, 1.333, 1, 1.33, 1, 0.66, 1.33, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(9.281, 28.047, -25.821), Vector3(7.693, 28.047, -28.502), Vector3(7.409528, 27.48, -29.054201), Vector3(7.881106, 27.439, -29.617699), Vector3(15.994156, 26.832, -34.28396), Vector3(17.673492, 26.483166, -33.08178), Vector3(25.995735, 24.747509, -28.18678), Vector3(25.649897, 24.644024, -26.550377), Vector3(25.649899, 24.02964, -16.425243), Vector3(25.49602, 24.172026, -15.8943405), Vector3(24.984482, 23.969202, -15.985051), Vector3(23.91786, 23.942202, -15.879728), Vector3(15.372501, 23.353876, -10.872317), Vector3(12.177716, 15.67548, -9.754516), Vector3(11.075535, 16.181421, -8.847585), Vector3(9.627931, 15.555689, -7.858056), Vector3(8.379208, 15.899618, -6.868105), Vector3(5.9331465, 13.433536, -5.369052), Vector3(4.099618, 13.433536, -4.1385818), Vector3(2.0966015, 11.382578, -2.911787), Vector3(0.15906906, 11.1153145, -2.2238293), Vector3(-1.7784615, 9.739543, -1.5358713), Vector3(-3.8668528, 9.862465, -0.99533844), Vector3(-5.955244, 8.882569, -0.4548067), Vector3(-7.3622026, 9.198779, -0.5572796), Vector3(-8.769154, 8.836408, -0.6597526), Vector3(-9.338586, 9.128558, -0.693221), Vector3(-10.238254, 8.840783, -0.89174163)]
+"values": [9.281, 7.693, 7.409528, 7.881106, 15.994156, 17.673492, 25.995735, 25.649897, 25.649899, 25.49602, 24.984482, 23.91786, 15.372501, 12.177716, 11.075535, 9.627931, 8.379208, 5.9331465, 4.099618, 2.0966015, 0.15906906, -1.7784615, -3.8668528, -5.955244, -7.3622026, -8.769154, -9.338586, -10.238254]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4999999, 1.8, 1.9999999, 4.466, 5.1666665, 7.425, 8.3, 10.133334, 10.3, 10.474668, 10.733334, 12.482333, 13.6, 13.8, 14, 14.2, 14.4, 14.6, 14.8, 15, 15.2, 15.400001, 15.6, 15.799999, 15.999999, 16.2, 16.400005),
+"transitions": PackedFloat32Array(1, 1.33, 1, 1, 1.333, 1, 1.33, 1, 0.66, 1.33, 1, 1, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333, 1.666, 0.333),
+"update": 0,
+"values": [28.047, 28.047, 27.48, 27.439, 26.832, 26.483166, 24.747509, 24.644024, 24.02964, 24.172026, 23.969202, 23.942202, 23.353876, 15.67548, 16.181421, 15.555689, 15.899618, 13.433536, 13.433536, 11.382578, 11.1153145, 9.739543, 9.862465, 8.882569, 9.198779, 8.836408, 9.128558, 8.840783]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4999999, 1.8, 1.9999999, 4.466, 5.1666665, 7.425, 8.3, 10.133334, 10.3, 10.474668, 10.733334, 12.482333, 13.6, 13.8, 14, 14.2, 14.4, 14.6, 14.8, 15, 15.2, 15.400001, 15.6, 15.799999, 15.999999, 16.2, 16.400005),
+"transitions": PackedFloat32Array(1, 1, 2, 1, 1.333, 1, 1.33, 1, 0.66, 1.33, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-25.821, -28.502, -29.054201, -29.617699, -34.28396, -33.08178, -28.18678, -25.005527, -16.425243, -15.8943405, -15.985051, -15.879728, -10.872317, -9.754516, -8.847585, -7.858056, -6.868105, -5.369052, -4.1385818, -2.911787, -2.2238293, -1.5358713, -0.99533844, -0.4548067, -0.5572796, -0.6597526, -0.693221, -0.89174163]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mpn84"]
@@ -44,11 +98,42 @@ _data = {
 &"ball2_move": SubResource("Animation_gxout")
 }
 
+[sub_resource type="Resource" id="Resource_i74pb"]
+script = ExtResource("5_7o1u2")
+knockback = Vector3(0, 10, 10)
+cylindrical = true
+metadata/_custom_type_script = "uid://d1bexs05tsodp"
+
+[sub_resource type="Resource" id="Resource_8q6fb"]
+script = ExtResource("7_fyq2b")
+player_mode = 3
+metadata/_custom_type_script = "uid://k6ptkg1xt4vv"
+
+[sub_resource type="Resource" id="Resource_ub2br"]
+script = ExtResource("8_rwfw8")
+duration = 0.15
+metadata/_custom_type_script = "uid://d1nop88i4mvbq"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7goph"]
+radius = 0.6
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_icsnq"]
+load_path = "res://.godot/imported/puff.png-d5cf88b79e735a16aa6beac63196e037.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqyue"]
+transparency = 1
+albedo_texture = SubResource("CompressedTexture2D_icsnq")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_353ea"]
+material = SubResource("StandardMaterial3D_eqyue")
+size = Vector2(2, 2)
+
 [node name="Ball" type="Node3D" unique_id=1870099781]
+script = ExtResource("1_u58yv")
 
 [node name="Node3D" type="RigidBody3D" parent="." unique_id=1430907157]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 3.687, 22.259, -25.257)
-script = ExtResource("1_u58yv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 9.281, 28.047, -25.821)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D" unique_id=1328408374]
 shape = SubResource("SphereShape3D_353ea")
@@ -63,4 +148,30 @@ texture = ExtResource("2_qsnj0")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D" unique_id=1797006162]
 libraries/ = SubResource("AnimationLibrary_mpn84")
 
-[connection signal="animation_finished" from="Node3D/AnimationPlayer" to="Node3D" method="_on_animation_player_animation_finished"]
+[node name="HitboxArea3D" type="Area3D" parent="Node3D" unique_id=607883855]
+transform = Transform3D(-0.99999994, 0, 8.7422734e-08, 0, 1.0000001, 0, -8.742271e-08, 0, -1, 0, 0, 0)
+script = ExtResource("3_wfwve")
+actions = Array[ExtResource("4_x2kw5")]([SubResource("Resource_i74pb"), SubResource("Resource_8q6fb"), SubResource("Resource_ub2br")])
+metadata/_custom_type_script = "uid://c04hys62vii2q"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/HitboxArea3D" unique_id=1311316732]
+shape = SubResource("SphereShape3D_7goph")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Node3D" unique_id=422328874]
+emitting = false
+amount = 50
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB(-1.0497074, -1.1984863, -0.7322922, 2.2187347, 2.4140015, 1.4615769)
+mesh = SubResource("QuadMesh_353ea")
+direction = Vector3(1, 1, 1)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 4.0
+damping_min = 6.0
+damping_max = 8.0
+
+[connection signal="animation_finished" from="Node3D/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
