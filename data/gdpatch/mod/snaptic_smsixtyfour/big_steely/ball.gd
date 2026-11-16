@@ -14,6 +14,7 @@ func _ready() -> void:
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	$Node3D/CollisionShape3D.disabled = true
 	$Node3D/HitboxArea3D/CollisionShape3D.disabled = true
+	
 	$Node3D/Sprite3D.visible = false
 	$Node3D/CPUParticles3D.visible = true;
 	$Node3D/CPUParticles3D.emitting = true;
